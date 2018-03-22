@@ -1,0 +1,10 @@
+server:
+  port: 8768
+
+spring:
+  application: config-client
+  cloud:
+    config:
+      label: master
+      profile: dev
+      uri:  http://127.0.0.1:8767/

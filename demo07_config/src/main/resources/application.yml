@@ -1,0 +1,21 @@
+
+server:
+  port: 8767
+
+spring:
+  application:
+    name: micro-service-07-config
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/lisongzhao0/test/
+          search-paths:
+          username:
+          password:
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/

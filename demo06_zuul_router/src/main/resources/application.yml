@@ -1,0 +1,21 @@
+
+server:
+  port: 8766
+
+spring:
+  application:
+    name: micro-service-05-zuul-router
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: micro-service-04-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: micro-service-05-forein
